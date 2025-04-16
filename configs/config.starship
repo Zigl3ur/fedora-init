@@ -1,6 +1,7 @@
 format = """
 [╭─](fg:#333333)\
 [  ](fg:#ffffff)\
+$hostname\
 [⟩](fg:#333333)\
 $directory\
 $git_branch\
@@ -11,6 +12,7 @@ $cmd_duration\
 $package\
 $bun\
 $zig\
+$golang\
 $python\
 $rust\
 $swift\
@@ -24,6 +26,12 @@ $character
 [sudo]
 disabled = false
 format = '[ 󰍀 ](yellow bold)'
+
+[hostname]
+disabled = false
+format = '[ $hostname ](fg:#6A9FB5)'
+style = 'fg:#6A9FB5'
+ssh_only = false
 
 [character]
 error_symbol = "[❯](bold #FF9580)"
@@ -39,9 +47,9 @@ home_symbol = " "
 "Downloads" = " 󰇚 "
 "Music" = " 󰝚 "
 "Documents" = " 󰈙 "
-"IUT" = " 󰑴 "
+"cours" = " 󰑴 "
 "Applications" = "  "
-"Code" = " 󰅩 "
+"Dev" = " 󰅩 "
 "Pictures" = "  "
 "Movies" = "  "
 "Desktop" = "  "
@@ -82,6 +90,9 @@ format = '[  ($version) ](red bold)'
 
 [bun]
 format = '[ $symbol$version ](white)'
+
+[golang]
+format = '[ ($version)](bold cyan)'
 
 [zig]
 version_format = 'v${major}.${minor}.${patch}'
